@@ -1,0 +1,56 @@
+{
+  "name": "barcode-management-system",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint .",
+    "ng": "ng",
+    "start": "nx serve",
+    "build": "nx build",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test"
+  },
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ],
+  "dependencies": {
+    "@angular/animations": "^19.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "dynamsoft-javascript-barcode": "^9.6.42",
+    "jsbarcode": "^3.11.6",
+    "ngx-barcode-input": "^0.1.6",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular-devkit/core": "^19.0.0",
+    "@angular-devkit/schematics": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@eslint/js": "^9.15.0",
+    "@nx/angular": "20.1.2",
+    "@nx/workspace": "20.1.2",
+    "@schematics/angular": "^19.0.0",
+    "@types/jasmine": "~5.1.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "jasmine-core": "~5.4.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^19.0.0",
+    "nx": "20.1.2",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0"
+  }
+}
