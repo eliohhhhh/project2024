@@ -1,0 +1,21 @@
+<div class="scanner-container">
+    <h2>Barcode Scanner</h2>
+    <input type="text" [(ngModel)]="scannedBarcode" placeholder="Scan barcode here..." />
+    <head> <link rel="stylesheet" href="barcode-scanner.component.css"></head>
+    <div *ngIf="scannedItem" class="item-details">
+      <h3>Item Details:</h3>
+      <p><strong>Name:</strong> {{ scannedItem }}</p>
+      <p><strong>Quantity:</strong> {{ scannedItem }}</p>
+      <p><strong>Barcode:</strong> {{ scannedItem}}</p>
+    </div>
+    
+<!-- scannedItem: This variable should represent whether an item has been scanned or not. If it is truthy (i.e., an item has been scanned), the first part of the condition is satisfied.
+scannedBarcode.length > 0: This checks if the scannedBarcode string has a length greater than zero, meaning that a barcode value has been captured. This ensures that there is indeed a barcode to display in the error message.
+
+-->
+    <div *ngIf="scannedItem && scannedBarcode.length> 0" class="error-message">
+      <p>No item found for barcode "{{ scannedBarcode }}"</p>
+    </div>
+    
+    <p>Press Enter to submit the scanned barcode.</p>
+  </div>

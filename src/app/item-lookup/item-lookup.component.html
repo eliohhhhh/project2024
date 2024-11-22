@@ -1,0 +1,20 @@
+<div>
+  <h2>Item Lookup</h2>
+  <input [(ngModel)]="searchTerm" placeholder="Search by Name or Barcode" />
+  <button (click)="searchItems()">Search</button>
+<head><link rel="stylesheet" href="item-lookup.component.css"></head>
+  <div *ngIf="searchResults.length > 0">
+    <h3>Search Results:</h3>
+    <ul>
+      <li *ngFor="let item of searchResults">
+        <strong>Name:</strong> {{ item.name }} | 
+        <strong>Quantity:</strong> {{ item.quantity }} | 
+        <strong>Barcode:</strong> {{ item.barcodeValue }}
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="searchResults.length === 0 && searchTerm">
+    <p>No items found.</p>
+  </div>
+</div>

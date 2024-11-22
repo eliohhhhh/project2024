@@ -1,0 +1,48 @@
+<!-- this inventory html code  is used to add items and the quantity
+and according to this it gives the barcode for this item. 
+-->
+<head>
+  <link rel="stylesheet" href="inventory.component.css">
+</head>
+<div>
+  <h2>Inventory List</h2>
+  <!-- this is an input field where users can enter the name of a new item -->
+  <input [(ngModel)]="newItemName" placeholder="Item Name" />
+  <input type="number" [(ngModel)]="newItemQuantity" placeholder="Quantity" />
+
+  <!-- this button is for adding the new item by clicking on Add Item button
+  The add item method is defined in the components TypeScript clas when the button is clicked. 
+  -->
+  <button (click)="addItem()">Add Item</button>
+
+  <table>
+    <thead>
+      <tr>
+        <!-- each header of this displays different data 
+        eg: name : will conatin the item name
+        eg: Quantity: will contain the quantity of each item
+        eg: Barcode: will contain the barcode for each item 
+        -->
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Barcode</th>
+      </tr>
+    </thead>
+    <tbody>  <!-- This element defines the body section of a table, which contains the actual data rows. --> 
+      
+      <tr *ngFor="let item of items"> <!-- This line creates a new table row (<tr>) for each item in the items array. -->
+
+<!-- This cell displays the name of the current item being iterated over.
+{{ item.name }}: This syntax uses Angular's interpolation feature to bind the value of item.
+ name (the name property of the current item object) to the cell.
+  When rendered, this will show the actual name of each item in the inventory. -->
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        
+          <canvas #barcodeCanvas ></canvas>
+         
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

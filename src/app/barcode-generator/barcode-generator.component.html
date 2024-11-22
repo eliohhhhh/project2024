@@ -1,0 +1,16 @@
+<div class="container">
+
+  <head>
+    <link rel="stylesheet" href="barcode-generator.component.css">
+  </head>
+    <h1>Barcode Generator</h1>
+    
+    <label for="barcodeValue"></label>
+    <input type="text" [(ngModel)]="barcodeValue" placeholder="Enter Barcode Value" />
+  <button (click)="generateBarcode()">Generate Barcode</button>
+
+
+  <!--When I use  the SVG, you can draw shapes paths, text, and images using various SVG elements like <circle>, <rect>, <path>, etc. -->
+  <svg *ngIf="showBarcode" id="barcode"></svg>
+</div>
+ 
