@@ -1,0 +1,18 @@
+{
+  "name": "@my-monorepo/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "empty": "0.10.1"
+  },
+  "devDependencies": {
+    "@nx/workspace": "20.1.2",
+    "nx": "20.1.2"
+  },
+  "description": "This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.",
+  "main": "index.js",
+  "keywords": [],
+  "author": ""
+}

@@ -1,0 +1,28 @@
+<div>
+  <h2>Inventory List</h2>
+  <input [(ngModel)]="newItemName" placeholder="Item Name" />
+  <input type="number" [(ngModel)]="newItemQuantity" min="0" placeholder="Quantity" />
+  <button (click)="addItem()">Add Item</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+
+        <th>Quantity</th>
+
+        <th>Barcode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>
+          <canvas #barcodeCanvas></canvas>
+         
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<div class="scanner-container">
+    <h2>Barcode Scanner</h2>
+    <input type="text" [(ngModel)]="scannedBarcode" placeholder="Scan barcode here..." />
+    
+    <div *ngIf="scannedItem" class="item-details">
+      <h3>Item Details:</h3>
+      <p><strong>Name:</strong> {{ scannedItem }}</p>
+      <p><strong>Quantity:</strong> {{ scannedItem }}</p>
+      <p><strong>Barcode:</strong> {{ scannedItem}}</p>
+    </div>
+    
+    <div *ngIf="scannedItem && scannedBarcode.length> 0" class="error-message">
+      <p>No item found for barcode "{{ scannedBarcode }}"</p>
+    </div>
+    
+    <p>Press Enter to submit the scanned barcode.</p>
+  </div>

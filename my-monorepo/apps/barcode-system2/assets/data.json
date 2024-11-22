@@ -1,0 +1,12 @@
+[
+    {
+      "name": "Item 1",
+      "quantity": 10,
+      "barcode": "BARCODE-123456"
+    },
+    {
+      "name": "Item 2",
+      "quantity": 5,
+      "barcode": "BARCODE-789012"
+    }
+  ]
